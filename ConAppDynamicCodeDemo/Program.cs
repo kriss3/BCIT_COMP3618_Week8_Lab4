@@ -15,10 +15,13 @@ namespace ConAppDynamicCodeDemo
         static void Main(string[] args)
         {
             string path = @"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Web.dll";
+            
             // Get the Assembly from the file
             Assembly webAssembly = Assembly.LoadFile(path);
+           
             // Get the type to the HttpUtility class
             Type utilType = webAssembly.GetType("System.Web.HttpUtility");
+            
             // Get the static HtmlEncode and HtmlDecode methods
             MethodInfo encode = utilType.GetMethod("HtmlEncode", new Type[] { typeof(string) });
             MethodInfo decode = utilType.GetMethod("HtmlDecode", new Type[] { typeof(string) });
