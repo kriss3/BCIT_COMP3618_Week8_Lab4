@@ -4,7 +4,7 @@ using static System.Console;
 
 namespace ConAppDynamicCodeDemo
 {
-    class Program
+    class MyApp
     {
         /// <summary>
         /// BCIT COMP3618 Week 8 Lab 4
@@ -29,6 +29,7 @@ namespace ConAppDynamicCodeDemo
             // Create a string to be encoded
             string originalString = "This is Sally & Jack's Anniversary <sic>";
             WriteLine(originalString);
+            
             // encode it and show the encoded value
             string encoded = (string)encode.Invoke(null, new object[] { originalString });
             WriteLine(encoded);
